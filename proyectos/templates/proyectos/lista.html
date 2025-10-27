@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Mis Proyectos{% endblock %}
+
+{% block content %}
+
+<h1 class="page-title">Portafolio de Proyectos</h1>
+
+<div class="row g-4">
+    {% for p in proyectos %}
+    <div class="col-12 col-md-6 col-lg-4">
+        <div class="card shadow-sm card-proyecto h-100">
+            <div class="card-body d-flex flex-column">
+                <h2 class="h5 text-primary fw-bold">{{ p.titulo }}</h2>
+
+                <p class="text-muted small flex-grow-1">
+                    {{ p.descripcion }}
+                </p>
+
+                <div class="mb-2">
+                    {% for tech in p.tecnologias %}
+                        <span class="badge-tec">{{ tech }}</span>
+                    {% endfor %}
+                </div>
+
+                {% if p.link_demo %}
+                <p class="link-demo small mb-2">
+                    <a href="{{ p.link_demo }}" target="_blank">Ver demo externa »</a>
+                </p>
+                {% else %}
+                <p class="text-secondary small fst-italic">
+                    Demo privada / local
+                </p>
+                {% endif %}
+
+                <div class="mt-auto">
+                    <a class="btn btn-sm btn-outline-primary w-100 mt-2"
+                       href="{% url 'detalle_proyecto' p.titulo %}">
+                        Ver detalle interno
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

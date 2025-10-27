@@ -1,0 +1,45 @@
+body {
+    background-color: #f4f6f8;
+    font-family: Arial, sans-serif;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.navbar-brand {
+    font-weight: 600;
+    color: #1E3A8A !important;
+}
+
+.page-title {
+    color: #1E3A8A;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.card-proyecto .badge-tec {
+    font-size: .75rem;
+    background-color: #1E3A8A;
+    color: #fff;
+    margin-right: .5rem;
+    border-radius: .5rem;
+    padding: .4rem .6rem;
+}
+
+.link-demo a {
+    color: #A3E635;
+    font-weight: 500;
+    text-decoration: none;
+}
+.link-demo a:hover {
+    opacity: .8;
+}
+
+.footer-minimal {
+    font-size: .8rem;
+    color: #777;
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ddd;
+}
